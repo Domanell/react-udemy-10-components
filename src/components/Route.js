@@ -5,6 +5,7 @@ function Route({ path, children }) {
 
 	// Filter to show children component of current path
 	if (path === currentPath) {
+		// Page content
 		return children;
 	}
 

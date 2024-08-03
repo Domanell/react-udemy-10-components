@@ -1,10 +1,9 @@
-import { useContext } from 'react';
-import NavigationContext from '../context/navigation';
+import useNavigation from '../hooks/use-navigation';
 import classNames from 'classnames';
 
 function Link({ to, children }) {
 	// Get navigate function from context (NavigationContext in navigation)
-	const { navigate } = useContext(NavigationContext);
+	const { navigate } = useNavigation();
 
 	const classes = classNames('text-blue-500');
 

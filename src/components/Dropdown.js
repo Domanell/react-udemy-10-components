@@ -13,6 +13,7 @@ function Dropdown({ options, value, onSelect }) {
 				return;
 			}
 
+			// Check if clicked target is not inside divEl, close dropdown
 			if (!divEl.current.contains(event.target)) {
 				setIsOpen(false);
 			}

@@ -7,7 +7,31 @@ function TablePage() {
 		{ name: 'Banana', color: 'bg-yellow-500', score: 1 },
 		{ name: 'Lime', color: 'bg-green-500', score: 4 },
 	];
-	return <Table data={data}></Table>;
+
+	const config = [
+		{
+			label: 'Fruits',
+			render: (fruit) => fruit.name,
+		},
+		{
+			label: 'Colors',
+			render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`}></div>,
+		},
+		{
+			label: 'Score',
+			render: (fruit) => fruit.score,
+		},
+	];
+
+	const keyFn = (fruit) => {
+		return fruit.name;
+	};
+
+	return (
+		<div>
+			<Table data={data} config={config} keyFn={keyFn}></Table>
+		</div>
+	);
 }
 
 export default TablePage;

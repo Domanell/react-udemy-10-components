@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# React Components Playground
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a UI component playground built with React and Tailwind CSS. It allows users to explore, test, and learn from a variety of reusable components and custom hooks. The project demonstrates modern React patterns, custom navigation, and utility-first styling.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Reusable Components**: Accordion, Button, Dropdown, Modal, Panel, Sidebar, Table, SortableTable, Link, Route
+- **Custom Hooks**: Includes hooks like `use-navigation` for navigation logic and `use-sort` for table sorting
+- **Custom Routing**: Simple navigation context and Route component for SPA-like navigation without external libraries
+- **Expandable Panels**: Collapsible UI components for better organization of content
+- **Responsive Design**: Styled with Tailwind CSS for a modern and responsive UI
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: For building the user interface
+- **Tailwind CSS**: For utility-first styling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Custom Hooks
 
-### `npm test`
+### use-navigation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Custom hook for managing navigation state and logic. Provides:
 
-### `npm run build`
+- Navigation state and current path
+- Functions to update and listen to navigation changes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### use-sort
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Custom hook for sorting table data. Provides:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Sorting state and direction
+- Functions to sort data by column
 
-### `npm run eject`
+## Components
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project includes the following reusable components:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Accordion**: Expandable/collapsible panels for organizing content
+- **Button**: Customizable button component
+- **Dropdown**: Select options from a list
+- **Modal**: Dialog overlay for displaying content
+- **Panel**: Container for grouping UI elements
+- **Sidebar**: Navigation sidebar for switching between pages
+- **Table**: Basic table for displaying data
+- **SortableTable**: Table with sorting functionality
+- **Link**: Custom navigation link
+- **Route**: Handles route matching and rendering
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+  App.js                # Main app component
+  index.js              # Entry point
+  index.css             # Tailwind CSS imports
+  components/           # Reusable UI components
+    Accordion.js
+    Button.js
+    Dropdown.js
+    Link.js
+    Modal.js
+    Panel.js
+    Route.js
+    Sidebar.js
+    SortableTable.js
+    Table.js
+  context/
+    navigation.js       # Navigation context for custom routing
+  hooks/
+    use-navigation.js   # Custom hook for navigation
+    use-sort.js         # Custom hook for sorting table data
+  pages/                # Demo pages for each component
+    AccordionPage.js
+    ButtonPage.js
+    CounterPage.js
+    DropdownPage.js
+    ModalPage.js
+    TablePage.js
+public/
+  index.html            # HTML template
+```
 
-## Learn More
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Node.js (v16 or higher)
+- npm
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone the repository:
 
-### Analyzing the Bundle Size
+```bash
+git clone <repository-url>
+cd 10-comps
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Install dependencies:
 
-### Making a Progressive Web App
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Start the development server:
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Open the application in your browser at http://localhost:3000.
 
-### Deployment
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Navigate through the sidebar to explore different component demos. Each page demonstrates the usage and props of a specific component.
 
-### `npm run build` fails to minify
+## Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm start`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run lint`: Runs ESLint to check for code quality.
+
+## License
+
+This project is for educational purposes.
